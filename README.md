@@ -4,8 +4,6 @@
 
 A Slack bot that automatically sets your status based on your schedule. Now your team will always know if Michal is working today or not.
 
-## Do u wanna know if Michal is working today? This bot can tell your boss! 😏
-
 ### Is Michal Working Today?
 
 **When working:** you'll see 💻 Working
