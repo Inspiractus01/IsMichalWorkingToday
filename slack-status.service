@@ -1,0 +1,14 @@
+[Unit]
+Description=Slack Auto Status Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/slack-status/auto_status.sh
+WorkingDirectory=/opt/slack-status
+Restart=always
+RestartSec=10
+Environment=PATH=/usr/bin:/bin
+
+[Install]
+WantedBy=multi-user.target
