@@ -4,6 +4,8 @@ After=network.target
 
 [Service]
 Type=simple
+User=omen
+Group=omen
 ExecStart=/opt/slack-status/auto_status.sh
 WorkingDirectory=/opt/slack-status
 Restart=always
