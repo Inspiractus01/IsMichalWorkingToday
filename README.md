@@ -1,35 +1,54 @@
-# Slack Auto Status
+# Is Michal Working Today?
 
-Automatically set your Slack status based on a schedule.
+> Is your boss asking "Where's Michal?" Well, wonder no more!
 
-## Setup
+A Slack bot that automatically sets your status based on your schedule. Now your team will always know if Michal is working today or not.
 
-1. **Get Slack Token**
+## Do u wanna know if Michal is working today? This bot can tell your boss! 😏
+
+### Is Michal Working Today?
+
+**When working:** you'll see 💻 Working
+
+**When not working:** you'll see 🌙 Not working
+
+No more "Hey, is Michal online?" messages. The status speaks for itself.
+
+---
+
+**⚠️ ATTENTION:** This app might suddenly dissapear when Michal swaps to full-time! Cause you know... school is happening. Until then, enjoy the automated struggle! 🎓→💼
+
+---
+
+## Quick Start
+
+1. **Get a Slack Token**
    - Go to [Slack API](https://api.slack.com/apps)
    - Create a new app → From scratch
    - Add scope: `users.profile:write`
    - Install app → Copy User OAuth Token (starts with `xoxb-`)
 
-2. **Configure**
+2. **Setup**
    ```bash
    cp .env.example .env
    nano .env  # Add your SLACK_TOKEN
    ```
 
-3. **Edit Schedule**
+3. **Configure Your Schedule**
    ```bash
    nano schedule.conf
    ```
 
 ## Usage
 
-### Auto Daemon (runs in background)
+### Run the Daemon
 
 ```bash
-# Run manually
 ./auto_status.sh
+```
 
-# Or install as systemd service (Linux)
+Or as a systemd service (Linux):
+```bash
 sudo cp slack-status.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable --now slack-status
@@ -38,9 +57,9 @@ sudo systemctl enable --now slack-status
 ### Manual Commands
 
 ```bash
-./slack_status.sh working   # Set Working :computer:
-./slack_status.sh offline   # Set Not working :crescent_moon:
-./slack_status.sh clear     # Clear status
+./slack_status.sh working   # "I'm grinding!"
+./slack_status.sh offline  # "I'm free!"
+./slack_status.sh clear     # "Who am I?"
 ./slack_status.sh set "In a meeting" ":meeting:"  # Custom
 ```
 
@@ -57,7 +76,7 @@ Wed=09:00-17:30
 - Time: HH:MM-HH:MM (24-hour format)
 - Multiple intervals: `Mon=09:00-12:00,14:00-18:00`
 
-## Customize Status
+## Customize It
 
 In `schedule.conf`:
 ```
@@ -73,3 +92,7 @@ TIMEZONE=Europe/Amsterdam
 - bash
 - curl
 - jq
+
+---
+
+*Is Michal working today? Now you know!* 🎉
