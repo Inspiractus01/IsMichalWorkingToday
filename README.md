@@ -1,6 +1,6 @@
 # Is Michal Working Today?
 
-> Is your boss asking "Where's Michal?" Well, wonder no more!
+> Is your boss asking "Is Michal Working Today?" Well, wonder no more!
 
 A Slack bot that automatically sets your status based on your schedule. Now your team will always know if Michal is working today or not.
 
